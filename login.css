@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-check-label {
+    cursor: pointer;
+}
+
+.forgot-password {
+    font-size: 0.9rem;
+}
+
+h2{
+    font-weight: 900;
+}
+
+h2 span{
+    color: orangered;
+}
+
+a{
+    text-decoration: none;
+    color: orangered;
+}
+
+a:hover{
+    color: black;
+}
+
+label{
+    font-weight: 700;
+}
+
+.btn{
+    background-color: orangered;
+}
+
+.error{
+    border-color: red;
+}
+
+.bottom-right, .top-right, .top-left{
+    position: absolute;
+}
+
+.top-left{
+    transform: translate(-550px,-220px) rotate(-20deg);
+}
+
+.top-right{
+    transform: translate(550px,-220px) rotate(20deg);
+}
+
+.bottom-right{
+    transform: translate(550px,220px) rotate(20deg);
+}

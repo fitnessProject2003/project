@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, sans-serif;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main .side-one{
+    background-color: white;
+    width: 80%;
+}
+
+.side-one h1{
+    margin: 10% 0% 5% 5%;
+    font-weight: 900;
+    font-size: 50px;
+}
+
+.side-one h1 span{
+    color: orangered;
+    font-style: italic;
+}
+
+.side-one p{
+    margin-left: 5%;
+    color: gray;
+}
+
+.side-one span{
+    color: orangered;
+}
+
+.main .side-two{
+    background-color: black;
+    width: 20%;
+}
+
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.btn-outline-primary a{
+    color: white;
+}
+
+.main-img{
+position: absolute;
+bottom: 0px;
+left: 70%;
+margin-bottom: 3.5px;
+padding: 0px;
+
+}
+
+header{
+    background-color: black;
+}
+
+.container-fluid{
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link{
+    color: orangered;
+}
+
+.head-links :hover{
+    color: grey; 
+}
+
+.btn-outline-danger{
+    border-color: orangered;
+}
+
+.btn-danger{
+    background-color: orangered;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    background-color: black;
+}
+
+.info h1{
+    color: orangered;
+    font-weight: 900;
+}
+
+.carousel{
+    background-color: orangered;
+    width: 400px;
+}

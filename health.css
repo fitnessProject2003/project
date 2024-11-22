@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.calculator {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+}
+
+h1{
+    font-weight: 900;
+    color: black;
+}
+
+h1 span{
+    color: orangered;
+}
+
+h3 {
+    color: orangered;
+    font-weight: 900;
+}
+
+.form-label{
+    font-weight: 900;
+    color: black;
+}
+
+.cal-btn {
+    background-color: orangered;
+    color: #ffffff;
+    border: none;
+}
+
+.cal-btn:hover {
+    background-color: black;
+}
+
+@media (max-width: 768px) {
+    .calculator {
+        margin-bottom: 2rem;
+    }
+}

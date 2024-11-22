@@ -1,0 +1,43 @@
+span {
+    color: orangered;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cont-one {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    width: 70%;
+}
+
+.cont-one img {
+    width: 25px;
+    height: 25px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.cont-two{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-color: transparent;
+    width: 500px;
+    overflow: hidden;
+}
