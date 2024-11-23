@@ -1,4 +1,3 @@
-// Sample gym data (initially hardcoded)
 const gyms = [
     { name: "FitHub Gym", image: "https://via.placeholder.com/300x200", location: "Amman", rating: 4 },
     { name: "BodyBuild Gym", image: "https://via.placeholder.com/300x200", location: "Zarqa", rating: 5 },

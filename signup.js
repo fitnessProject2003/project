@@ -3,6 +3,7 @@ document.getElementById("signupForm").addEventListener("submit", function (e) {
 
     const firstName = document.getElementById("firstName").value.trim();
     const lastName = document.getElementById("lastName").value.trim();
+    const email = document.getElementById("Email").value;
     const username = document.getElementById("username").value.trim();
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
