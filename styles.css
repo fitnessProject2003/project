@@ -1,11 +1,15 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
     font-family: Arial, sans-serif;
 }
 
-.main{
+body {
+    overflow-x: hidden;
+}
+
+.main {
     display: flex;
     flex-direction: row;
     height: 500px;
@@ -13,59 +17,59 @@
     padding: 0px;
 }
 
-.main .side-one{
+.main .side-one {
     background-color: white;
     width: 80%;
 }
 
-.side-one h1{
+.side-one h1 {
     margin: 10% 0% 5% 5%;
     font-weight: 900;
     font-size: 50px;
 }
 
-.side-one h1 span{
+.side-one h1 span {
     color: orangered;
     font-style: italic;
 }
 
-.side-one p{
+.side-one p {
     margin-left: 5%;
     color: gray;
 }
 
-.side-one span{
+.side-one span {
     color: orangered;
 }
 
-.main .side-two{
+.main .side-two {
     background-color: black;
     width: 20%;
 }
 
-a{
+a {
     color: aliceblue;
     text-decoration: none;
 }
 
-.btn-outline-primary a{
+.btn-outline-primary a {
     color: white;
 }
 
-.main-img{
-position: absolute;
-bottom: 0px;
-left: 70%;
-margin-bottom: 3.5px;
-padding: 0px;
+.main-img {
+    position: absolute;
+    bottom: 0px;
+    left: 70%;
+    margin-bottom: 3.5px;
+    padding: 0px;
 
 }
 
-header{
+header {
     background-color: black;
 }
 
-.container-fluid{
+.container-fluid {
     position: sticky;
     top: 0px;
     z-index: 1;
@@ -73,23 +77,23 @@ header{
     padding: 0;
 }
 
-.nav-link{
+.nav-link {
     color: orangered;
 }
 
-.head-links :hover{
-    color: grey; 
+.head-links :hover {
+    color: grey;
 }
 
-.btn-outline-danger{
+.btn-outline-danger {
     border-color: orangered;
 }
 
-.btn-danger{
+.btn-danger {
     background-color: orangered;
 }
 
-.info{
+.info {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -101,13 +105,31 @@ header{
     background-color: black;
 }
 
-.info h1{
+.info h1 {
     color: orangered;
     font-weight: 900;
 }
 
-.carousel{
+.carousel {
     background-color: orangered;
     width: 400px;
 }
 
+@media (max-width:786px) {
+    .main-img {
+        position: absolute;
+        bottom: -122px;
+        left: 60%;
+        margin-bottom: 3.5px;
+        padding: 0px;
+        z-index: 0;
+    }
+
+    .side-one{
+        font-size: 13px;
+    }
+    
+    p{
+        z-index: 2;
+    }
+}

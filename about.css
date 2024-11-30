@@ -41,3 +41,10 @@ span {
     width: 500px;
     overflow: hidden;
 }
+
+@media (max-width:580px) {
+    .box{
+        font-size: 10px;
+    }
+    
+}
