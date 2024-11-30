@@ -60,7 +60,7 @@ a {
     position: absolute;
     bottom: 0px;
     left: 70%;
-    margin-bottom: 3.5px;
+    /* margin-bottom: 3.5px; */
     padding: 0px;
 
 }
@@ -117,12 +117,7 @@ header {
 
 @media (max-width:786px) {
     .main-img {
-        position: absolute;
-        bottom: -122px;
-        left: 60%;
-        margin-bottom: 3.5px;
-        padding: 0px;
-        z-index: 0;
+        display: none;
     }
 
     .side-one{
