@@ -122,6 +122,10 @@ header {
 
     .side-one{
         font-size: 13px;
+        background-image: url(assets/mainImage.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        backdrop-filter: blur(100px);
     }
     
     p{
