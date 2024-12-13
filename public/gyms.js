@@ -1,14 +1,14 @@
 const gyms = [
-    { name: "FitHub Gym", image: "https://via.placeholder.com/300x200", location: "Amman", rating: 4 },
-    { name: "BodyBuild Gym", image: "https://via.placeholder.com/300x200", location: "Zarqa", rating: 5 },
-    { name: "PowerFlex Gym", image: "https://via.placeholder.com/300x200", location: "Irbid", rating: 3 },
-    { name: "Strength Zone", image: "https://via.placeholder.com/300x200", location: "Amman", rating: 4 },
-    { name: "Peak Performance Gym", image: "https://via.placeholder.com/300x200", location: "Zarqa", rating: 5 },
-    { name: "ProFit Gym", image: "https://via.placeholder.com/300x200", location: "Irbid", rating: 4 },
-    { name: "Powerhouse Gym", image: "https://via.placeholder.com/300x200", location: "Amman", rating: 3 },
-    { name: "MaxFit Gym", image: "https://via.placeholder.com/300x200", location: "Zarqa", rating: 2 },
-    { name: "Muscle Forge", image: "https://via.placeholder.com/300x200", location: "Irbid", rating: 5 },
-    { name: "IronWorks Gym", image: "https://via.placeholder.com/300x200", location: "Amman", rating: 4 }
+    { name: "FitHub Gym", image: "/assets/gyms photos/gym1.jpg", location: "Amman", rating: 4 },
+    { name: "BodyBuild Gym", image: "/assets/gyms photos/gym2.jpg", location: "Zarqa", rating: 5 },
+    { name: "PowerFlex Gym", image: "/assets/gyms photos/gym3.jpg", location: "Irbid", rating: 3 },
+    { name: "Strength Zone", image: "/assets/gyms photos/gym4.jpg", location: "Amman", rating: 4 },
+    { name: "Peak Performance Gym", image: "/assets/gyms photos/gym5.jpg", location: "Zarqa", rating: 5 },
+    { name: "ProFit Gym", image: "/assets/gyms photos/gym6.jpg", location: "Irbid", rating: 4 },
+    { name: "Powerhouse Gym", image: "/assets/gyms photos/gym7.jpg", location: "Amman", rating: 3 },
+    { name: "MaxFit Gym", image: "/assets/gyms photos/gym8.jpg", location: "Zarqa", rating: 2 },
+    { name: "Muscle Forge", image: "/assets/gyms photos/gym9.jpg", location: "Irbid", rating: 5 },
+    { name: "IronWorks Gym", image: "/assets/gyms photos/gym10.jpg", location: "Amman", rating: 4 }
 ];
 
 // Function to display gyms on the page

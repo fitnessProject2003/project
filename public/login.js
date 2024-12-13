@@ -8,10 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.querySelector("form").addEventListener("submit", function (e) {
-        e.preventDefault();
-
         const email = emailInput.value;
         const password = document.getElementById("password").value;
+
+        console.log("Email:", email); 
+        console.log("Password:", password); 
 
         if (email && password) {
             if (rememberMeCheckbox.checked) {
@@ -20,10 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 localStorage.removeItem("rememberedEmail");
             }
 
-            alert("Login successful!");
-            // Add your login here
+        
         } else {
             alert("Please fill out all fields.");
+            e.preventDefault(); 
         }
     });
 });

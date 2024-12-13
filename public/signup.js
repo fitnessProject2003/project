@@ -1,5 +1,5 @@
 document.getElementById("signupForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+    e.preventDefault(); // Prevent default form submission
 
     const firstName = document.getElementById("firstName").value.trim();
     const lastName = document.getElementById("lastName").value.trim();
@@ -9,12 +9,15 @@ document.getElementById("signupForm").addEventListener("submit", function (e) {
     const confirmPassword = document.getElementById("confirmPassword").value;
     const gender = document.getElementById("gender").value;
 
-    // Password format
+
+    document.querySelectorAll(".form-control").forEach(input => input.classList.remove("error"));
+
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,16}$/;
 
     if (!passwordRegex.test(password)) {
         document.getElementById("password").classList.add("error");
         document.getElementById("confirmPassword").classList.add("error");
+        alert("Password must be 8-16 characters long, with at least one uppercase letter and one number.");
         return;
     }
 
@@ -23,11 +26,5 @@ document.getElementById("signupForm").addEventListener("submit", function (e) {
         return;
     }
 
-    if (firstName && lastName && username && password && gender) {
-        // Redirect to login page on success
-        alert("Sign up successful! Redirecting to login page...");
-        window.location.href = "login.html";
-    } else {
-        alert("Please fill out all fields.");
-    }
+    this.submit();
 });
