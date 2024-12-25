@@ -12,8 +12,8 @@ body {
     max-width: 400px;
     padding: 20px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 50px 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.189);
 }
 
 .form-check-label {
@@ -51,6 +51,7 @@ label{
 
 .error{
     border-color: red;
+    color: red;
 }
 
 .bottom-right, .top-right, .top-left{

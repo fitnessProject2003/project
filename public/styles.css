@@ -12,7 +12,7 @@ body {
 .main {
     display: flex;
     flex-direction: row;
-    height: 467px;
+    height: 491px;
     margin: 0px;
     padding: 0px;
 }
@@ -114,6 +114,40 @@ header {
     background-color: orangered;
     width: 400px;
 }
+
+header span{
+    color: orangered;
+}
+
+header strong{
+    color: white;
+    font-size: 14px;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px; 
+    height: 10px; 
+    background-color: black;
+}
+
+
+::-webkit-scrollbar-track {
+    background: black; 
+    border-radius: 5px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: orangered;
+    border-radius: 5px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: white; 
+}
+
 
 @media (max-width:786px) {
     .main-img {

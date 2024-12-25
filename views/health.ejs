@@ -4,106 +4,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Calcultaions</title>
+    <title>Health Calculations</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="health.css">
 </head>
 
 <body>
-    <!-- nav bar -->
+    <!-- Nav Bar -->
     <%- include('partials/nav') %>
-    <!-- Calculators -->
-    <div class="container my-5">
-        <h1 class="text-center mb-4">Fitness <span>Calculators</span></h1>
 
-        <!-- Protein Need Calculator -->
-        <div class="calculator shadow p-4 rounded mb-5">
-            <h3>Protein Need Calculator</h3>
-            <div class="mb-3">
-                <label for="protein-weight" class="form-label">Weight (kg):</label>
-                <input type="number" id="protein-weight" class="form-control">
-            </div>
-            <div class="mb-3">
-                <label for="protein-gender" class="form-label">Gender:</label>
-                <select id="protein-gender" class="form-select">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="protein-activity" class="form-label">Activity Level:</label>
-                <select id="protein-activity" class="form-select">
-                    <option value="sedentary">Sedentary</option>
-                    <option value="light">Light</option>
-                    <option value="moderate">Moderate</option>
-                    <option value="intense">Intense</option>
-                </select>
-            </div>
-            <button class="btn btn-primary w-100 cal-btn" onclick="calculateProtein()">Calculate Protein Needs</button>
-            <p id="protein-result" class="mt-3"></p>
-        </div>
+        <!-- Calculators -->
+        <div class="container my-5">
+            <h1 class="text-center mb-4">Fitness <span>Calculators</span></h1>
 
-        <!-- Carb Need Calculator -->
-        <div class="calculator shadow p-4 rounded mb-5">
-            <h3>Carb Need Calculator</h3>
-            <div class="mb-3">
-                <label for="carb-weight" class="form-label">Weight (kg):</label>
-                <input type="number" id="carb-weight" class="form-control">
-            </div>
-            <div class="mb-3">
-                <label for="carb-gender" class="form-label">Gender:</label>
-                <select id="carb-gender" class="form-select">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="carb-activity" class="form-label">Activity Level:</label>
-                <select id="carb-activity" class="form-select">
-                    <option value="sedentary">Sedentary</option>
-                    <option value="light">Light</option>
-                    <option value="moderate">Moderate</option>
-                    <option value="intense">Intense</option>
-                </select>
-            </div>
-            <button class="btn btn-primary w-100 cal-btn" onclick="calculateCarbs()">Calculate Carb Needs</button>
-            <p id="carb-result" class="mt-3"></p>
-        </div>
+            <!-- Navigation Bar for Calculators -->
+            <div class="container my-5">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light shadow rounded">
+                    <div class="container-fluid">
+                        <!-- Brand or Toggle Button -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span> <span>Navigate to the wanted calculator</span>
+                        </button>
 
-        <!-- Water Intake Calculator -->
-        <div class="calculator shadow p-4 rounded mb-5">
-            <h3>Water Intake Calculator</h3>
-            <div class="mb-3">
-                <label for="water-weight" class="form-label">Weight (kg):</label>
-                <input type="number" id="water-weight" class="form-control">
+                        <!-- Navbar Links -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav d-flex flex-wrap justify-content-around w-100">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#protein-calculator">Protein Need Calculator</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#carb-calculator">Carb Need Calculator</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#water-calculator">Water Intake Calculator</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#bmi-calculator">BMI Calculator</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#calorie-calculator">Calorie Intake Calculator</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
             </div>
-            <div class="mb-3">
-                <label for="water-gender" class="form-label">Gender:</label>
-                <select id="water-gender" class="form-select">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="water-activity" class="form-label">Activity Level:</label>
-                <select id="water-activity" class="form-select">
-                    <option value="sedentary">Sedentary</option>
-                    <option value="light">Light</option>
-                    <option value="moderate">Moderate</option>
-                    <option value="intense">Intense</option>
-                </select>
-            </div>
-            <button class="btn btn-primary w-100 cal-btn" onclick="calculateWater()">Calculate Water Intake</button>
-            <p id="water-result" class="mt-3"></p>
-        </div>
-    </div>
 
-    <!-- footer  -->
-    <%- include('partials/footer') %>
+            <!-- Protein Need Calculator -->
+            <div class="calculator shadow p-4 rounded mb-5" id="protein-calculator">
+                <h3>Protein Need Calculator</h3>
+                <div class="mb-3">
+                    <label for="protein-weight" class="form-label">Weight (kg):</label>
+                    <input type="number" id="protein-weight" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="protein-gender" class="form-label">Gender:</label>
+                    <select id="protein-gender" class="form-select">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="protein-activity" class="form-label">Activity Level:</label>
+                    <select id="protein-activity" class="form-select">
+                        <option value="sedentary">Sedentary</option>
+                        <option value="light">Light</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="intense">Intense</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary w-100 cal-btn" onclick="calculateProtein()">Calculate Protein
+                    Needs</button>
+                <p id="protein-result" class="mt-3"></p>
+            </div>
 
-    <script src="health.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+            <!-- Carb Need Calculator -->
+            <div class="calculator shadow p-4 rounded mb-5" id="carb-calculator">
+                <h3>Carb Need Calculator</h3>
+                <div class="mb-3">
+                    <label for="carb-weight" class="form-label">Weight (kg):</label>
+                    <input type="number" id="carb-weight" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="carb-gender" class="form-label">Gender:</label>
+                    <select id="carb-gender" class="form-select">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="carb-activity" class="form-label">Activity Level:</label>
+                    <select id="carb-activity" class="form-select">
+                        <option value="sedentary">Sedentary</option>
+                        <option value="light">Light</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="intense">Intense</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary w-100 cal-btn" onclick="calculateCarbs()">Calculate Carb Needs</button>
+                <p id="carb-result" class="mt-3"></p>
+            </div>
+
+            <!-- Water Intake Calculator -->
+            <div class="calculator shadow p-4 rounded mb-5" id="water-calculator">
+                <h3>Water Intake Calculator</h3>
+                <div class="mb-3">
+                    <label for="water-weight" class="form-label">Weight (kg):</label>
+                    <input type="number" id="water-weight" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="water-gender" class="form-label">Gender:</label>
+                    <select id="water-gender" class="form-select">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="water-activity" class="form-label">Activity Level:</label>
+                    <select id="water-activity" class="form-select">
+                        <option value="sedentary">Sedentary</option>
+                        <option value="light">Light</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="intense">Intense</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary w-100 cal-btn" onclick="calculateWater()">Calculate Water Intake</button>
+                <p id="water-result" class="mt-3"></p>
+            </div>
+
+            <!-- BMI Calculator -->
+            <div class="calculator shadow p-4 rounded mb-5" id="bmi-calculator">
+                <h3>BMI Calculator</h3>
+                <div class="mb-3">
+                    <label for="bmi-weight" class="form-label">Weight (kg):</label>
+                    <input type="number" id="bmi-weight" class="form-control" placeholder="Enter your weight in kg">
+                </div>
+                <div class="mb-3">
+                    <label for="bmi-height" class="form-label">Height (cm):</label>
+                    <input type="number" id="bmi-height" class="form-control" placeholder="Enter your height in cm">
+                </div>
+                <div class="mb-3">
+                    <label for="bmi-age" class="form-label">Age (years):</label>
+                    <input type="number" id="bmi-age" class="form-control" placeholder="Enter your age">
+                </div>
+                <div class="mb-3">
+                    <label for="bmi-gender" class="form-label">Gender:</label>
+                    <select id="bmi-gender" class="form-select">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="bmi-activity" class="form-label">Activity Level:</label>
+                    <select id="bmi-activity" class="form-select">
+                        <option value="sedentary">Sedentary</option>
+                        <option value="light">Light</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="intense">Intense</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary w-100 cal-btn" onclick="calculateBMI()">Calculate BMI</button>
+                <p id="bmi-result" class="mt-3"></p>
+                <div id="bmi-category" class="mt-3"></div>
+                <div id="bmi-advice" class="mt-3"></div>
+            </div>
+
+            <!-- Calorie Intake Calculator -->
+            <div class="calculator shadow p-4 rounded mb-5" id="calorie-calculator">
+                <h3>Calorie Intake Calculator</h3>
+                <div class="mb-3">
+                    <label for="calorie-weight" class="form-label">Weight (kg):</label>
+                    <input type="number" id="calorie-weight" class="form-control" placeholder="Enter your weight in kg">
+                </div>
+                <div class="mb-3">
+                    <label for="calorie-height" class="form-label">Height (cm):</label>
+                    <input type="number" id="calorie-height" class="form-control" placeholder="Enter your height in cm">
+                </div>
+                <div class="mb-3">
+                    <label for="calorie-age" class="form-label">Age (years):</label>
+                    <input type="number" id="calorie-age" class="form-control" placeholder="Enter your age">
+                </div>
+                <div class="mb-3">
+                    <label for="calorie-gender" class="form-label">Gender:</label>
+                    <select id="calorie-gender" class="form-select">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="calorie-activity" class="form-label">Activity Level:</label>
+                    <select id="calorie-activity" class="form-select">
+                        <option value="sedentary">Sedentary</option>
+                        <option value="light">Light</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="intense">Intense</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="calorie-goal" class="form-label">Goal:</label>
+                    <select id="calorie-goal" class="form-select">
+                        <option value="loss">Weight Loss</option>
+                        <option value="maintenance">Maintenance</option>
+                        <option value="gain">Weight Gain</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary w-100 cal-btn" onclick="calculateCalories()">Calculate Daily
+                    Calories</button>
+                <p id="calorie-result" class="mt-3"></p>
+                <div id="calorie-advice" class="mt-3"></div>
+            </div>
+
+            <%- include('partials/footer') %>
+
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script
+                    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+                <script src="health.js"></script>
 </body>
 
 </html>

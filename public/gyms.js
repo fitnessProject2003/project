@@ -35,31 +35,27 @@ function displayGyms(gyms) {
     });
 }
 
-// Function to filter gyms by search input and filters
+
 function filterGyms() {
     let filteredGyms = [...gyms];
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
     const locationFilter = document.getElementById('locationFilter').value;
     const ratingFilter = document.getElementById('ratingFilter').value;
 
-    // Filter by search input (gym name)
     if (searchInput) {
         filteredGyms = filteredGyms.filter(gym => gym.name.toLowerCase().includes(searchInput));
     }
 
-    // Filter by location
     if (locationFilter) {
         filteredGyms = filteredGyms.filter(gym => gym.location === locationFilter);
     }
 
-    // Sort by rating
     if (ratingFilter === 'desc') {
         filteredGyms = filteredGyms.sort((a, b) => b.rating - a.rating);
     } else if (ratingFilter === 'asc') {
         filteredGyms = filteredGyms.sort((a, b) => a.rating - b.rating);
     }
-
-    // Display filtered gyms
+    
     displayGyms(filteredGyms);
 }
 

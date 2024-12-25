@@ -1,26 +1,29 @@
 <div class="container-fluid z-3">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 mb-0">
         <div class="col-md-3 mb-2 mb-md-0 px-3">
             <img src="assets/Logo.jpg" alt="" height="50px" width="50px">
+            <% if(user) { %>
+                <p class="mx-1 d-inline"><span>Welcome,</span> <strong><%= user.username %></strong></p>
+                <% } %>
         </div>
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 head-links">
             <li><a href="/" class="nav-link px-2 link-secondary active">Home</a></li>
             <li><a href="/gyms" class="nav-link px-2">Gyms</a></li>
-            <li><a href="#" class="nav-link px-2">News</a></li>
-            <li><a href="#" class="nav-link px-2">Shop</a></li>
+            <li><a href="/temp" class="nav-link px-2">News</a></li>
+            <li><a href="/temp" class="nav-link px-2">Shop</a></li>
             <li><a href="/health" class="nav-link px-2">Health</a></li>
             <li><a href="/about" class="nav-link px-2">About</a></li>
         </ul>
-
-        <div class="col-md-3 text-end">
+        
+        <div class="col-md-3 text-end mx-2">
             <% if (user) { %>
                 <form action="/logout" method="post" class="d-inline">
                     <button type="submit" class="btn btn-outline-danger me-2">Sign Out</button>
                 </form>
                 <% } else { %>
                     <button type="button" class="btn btn-outline-danger me-2"><a href="/login">Login</a></button>
-                    <button type="button" class="btn btn-danger"><a href="/signup">Sign-up</a></button>
+                    <button type="button" class="btn btn-danger"><a href="/signup">SignUp</a></button>
                     <% } %>
         </div>
     </header>
